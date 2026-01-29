@@ -12,7 +12,7 @@ function App() {
   /* CREATE PASTE */
   function createPaste() {
     axios
-      .post("http://localhost:3001/api/pastes", {
+      .post("https://pastebin-lite-9qkg.onrender.com/api/pastes", {
         content: content,
         ttl_seconds: ttl ? Number(ttl) : null,
         max_views: maxViews ? Number(maxViews) : null
@@ -20,7 +20,7 @@ function App() {
       .then(function (response) {
         var data = response.data;
         if (data.url) {
-          setPasteUrl("http://localhost:3001" + data.url);
+          setPasteUrl("https://pastebin-lite-9qkg.onrender.com/" + data.url);
         }
       })
       .catch(function (error) {
