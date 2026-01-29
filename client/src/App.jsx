@@ -20,7 +20,7 @@ function App() {
       .then(function (response) {
         var data = response.data;
         if (data.url) {
-          setPasteUrl("https://pastebin-lite-9qkg.onrender.com/" + data.url);
+          setPasteUrl("https://pastebin-lite-9qkg.onrender.com" + data.url);
         }
       })
       .catch(function (error) {
