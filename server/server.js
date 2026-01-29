@@ -76,6 +76,11 @@ app.get("/api/pastes/:id", (req, res) => {
   });
 });
 
+
+app.get('/', (req, resp) => {
+  resp.send("Server is running")
+})
+
 /* ---------------- START SERVER ---------------- */
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () =>
